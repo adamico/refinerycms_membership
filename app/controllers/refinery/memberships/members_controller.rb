@@ -78,7 +78,7 @@ module Refinery
 
       def redirect?
         if current_refinery_user.nil?
-          redirect_to new_user_session_path
+          redirect_to login_members_path
         end
       end
 
