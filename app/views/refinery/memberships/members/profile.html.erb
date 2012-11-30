@@ -9,10 +9,13 @@
         <dd><%= value %></dd>
       <% end -%>
       <dt><%= @member.class.human_attribute_name :website %></dt>
-      <dd><%= @member.website.blank? ? "<em>not specified</em>".html_safe : @member.website %></dd>
+      <dd><%= @member.website.blank? ? "<em>not specified</em>".html_safe : link_to(@member.website, @member.website, target: "_blank") %></dd>
     </dl>
   </div>
-  <%= link_to t('.edit_profile'), edit_members_path %>
+  <%= link_to  edit_members_path, class: "btn" do %>
+    <i class="icon-pencil"></i>
+    <%= t('.edit_profile') %>
+  <% end -%>
   <%=raw @page.content_for(:body_below) if @page %>
 <% end %>
 
