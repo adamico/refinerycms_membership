@@ -8,6 +8,8 @@
         <dt><%= @member.class.human_attribute_name label %></dt>
         <dd><%= value %></dd>
       <% end -%>
+      <dt><%= @member.class.human_attribute_name :website %></dt>
+      <dd><%= @member.website.blank? ? "<em>not specified</em>".html_safe : @member.website %></dd>
     </dl>
   </div>
   <%= link_to t('.edit_profile'), edit_members_path %>
