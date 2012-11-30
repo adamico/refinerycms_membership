@@ -8,8 +8,6 @@
         <dt><%= @member.class.human_attribute_name label %></dt>
         <dd><%= value %></dd>
       <% end -%>
-      <dt><%= @member.class.human_attribute_name :website %></dt>
-      <dd><%= @member.website.blank? ? "<em>not specified</em>".html_safe : link_to(@member.website, @member.website, target: "_blank") %></dd>
     </dl>
   </div>
   <%= link_to  edit_members_path, class: "btn" do %>
