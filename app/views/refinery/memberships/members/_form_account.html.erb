@@ -1,18 +1,16 @@
-<fieldset>
-  <h1><%=t('refinery.members.shared.account')%></h1>
-  <ol>
-    <li>
-      <%= f.required_label :email %>
-      <%= f.text_field :email %>&nbsp;
-    </li>
-    <%= "<li><span class='preview'>#{t('members.form.blank_password_keeps_current', :scope => 'refinery.memberships')}</span></li>".html_safe if @member.persisted? %>
-    <li>
-      <%= f.required_label :password %>
-      <%= f.password_field :password, :autocomplete => 'off' %>&nbsp;
-    </li>
-    <li>
-      <%= f.required_label :password_confirmation %>
-      <%= f.password_field :password_confirmation, :autocomplete => 'off' %>&nbsp;
-    </li>
-  </ol>
-</fieldset>
+<h1><%=t('refinery.members.shared.account')%></h1>
+<div class="control-group">
+  <%= f.required_label :email, class: "control-label" %>
+  <div class="controls"><%= f.text_field :email %></div>
+</div>
+<div class="control-group">
+  <%= f.required_label :password, class: "control-label" %>
+  <div class="controls">
+    <%= f.password_field :password, :autocomplete => 'off' %>
+    <%= "<span class='help-inline'>#{t('members.form.blank_password_keeps_current', :scope => 'refinery.memberships')}</span>".html_safe if @member.persisted? %>
+  </div>
+</div>
+<div class="control-group">
+  <%= f.required_label :password_confirmation, class: "control-label" %>
+  <div class="controls"><%= f.password_field :password_confirmation, :autocomplete => 'off' %></div>
+</div>

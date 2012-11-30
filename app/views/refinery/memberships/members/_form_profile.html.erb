@@ -1,35 +1,33 @@
-<fieldset>
-  <h1><%=t('refinery.members.shared.profile')%></h1>
-  <ol>
-    <li>
-      <%= f.required_label :first_name %>
-      <%= f.text_field :first_name %>&nbsp;
-    </li>
-    <li>
-      <%= f.required_label :last_name %>
-      <%= f.text_field :last_name %>&nbsp;
-    </li>
-    <li>
-      <%= f.label :title %>
-      <%= f.text_field :title %>&nbsp;
-    </li>
-    <li>
-      <%= f.label :phone %>
-      <%= f.text_field :phone %>&nbsp;
-    </li>
-    <li>
-      <%= f.label :fax %>
-      <%= f.text_field :fax %>&nbsp;
-    </li>
-    <% if !f.object.new_record? %>
-    <li>
-      <%= f.label :membership_level %>
+<h1><%=t('refinery.members.shared.profile')%></h1>
+<div class="control-group">
+  <%= f.required_label :first_name, class: "control-label" %>
+  <div class="controls"><%= f.text_field :first_name %>&nbsp;</div>
+</div>
+<div class="control-group">
+  <%= f.required_label :last_name, class: "control-label" %>
+  <div class="controls"><%= f.text_field :last_name %>&nbsp;</div>
+</div>
+<div class="control-group">
+  <%= f.label :title, class: "control-label" %>
+  <div class="controls"><%= f.text_field :title %>&nbsp;</div>
+</div>
+<div class="control-group">
+  <%= f.label :phone, class: "control-label" %>
+  <div class="controls"><%= f.text_field :phone %>&nbsp;</div>
+</div>
+<div class="control-group">
+  <%= f.label :fax, class: "control-label" %>
+  <div class="controls"><%= f.text_field :fax %>&nbsp;</div>
+</div>
+<% if !f.object.new_record? %>
+  <div class="control-group">
+    <%= f.label :membership_level, class: "control-label" %>
+    <div class="controls">
       <% if @is_admin %>
-        <%= f.text_field :membership_level %>&nbsp;
+        <%= f.text_field :membership_level %>
       <% else %>
-        <%= @member.roles.collect(&:title).join(', ') %>&nbsp;
+        <span class="uneditable-input"><%= @member.roles.collect(&:title).join(', ') %></span>&nbsp;
       <% end %>
-    </li>
-    <% end %>
-  </ol>
-</fieldset>
+    </div>
+  </div>
+<% end %>

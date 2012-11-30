@@ -45,7 +45,7 @@
     <%= submit_tag submit_button_text,
                    :id => submit_button_id,
                    :name => nil,
-                   :class => "wymupdate button",
+                   :class => "wymupdate btn btn-success",
                    :tooltip => submit_button_title unless hide_submit %>
 
     <%= render :partial => "/refinery/continue_editing", :locals => {:f => f} if continue_editing -%>
@@ -55,7 +55,7 @@
                 cancel_url,
                 :title => cancel_title,
                 :id => cancel_button_id,
-                :class => "close_dialog button") unless hide_cancel %>
+                :class => "close_dialog btn btn-danger") unless hide_cancel %>
   </div>
   <div class='form-actions-right'>
     <%= link_to(delete_button_text,
@@ -64,7 +64,7 @@
                 :id => delete_button_id,
                 :method => :delete,
                 :confirm => delete_confirmation,
-                :class => "button confirm-delete") unless hide_delete %>
+                :class => "btn confirm-delete") unless hide_delete %>
 
     <%= will_paginate paginate[:collection],
                       :previous_label => paginate[:previous_label],
