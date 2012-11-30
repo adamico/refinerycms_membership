@@ -31,7 +31,7 @@ module Refinery
         end
 
         if @member.update_attributes(params[:member])
-          flash[:notice] = t('successful', :scope => 'members.update', :email => @member.email)
+          flash[:notice] = t('successful', :scope => 'refinery.members.update', :email => @member.email)
           MembershipMailer.deliver_member_profile_updated(@member).deliver unless @member.has_role?(:admin)
           redirect_to profile_members_path
         else
