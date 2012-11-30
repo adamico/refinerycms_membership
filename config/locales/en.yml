@@ -1,4 +1,6 @@
 en:
+  months: "%{count} months"
+  years: "%{count} years"
   refinery:
     shared:
       admin:
@@ -116,6 +118,8 @@ en:
       show:
         other: Other Memberships
       members:
+        profile:
+          edit_profile: Edit profile
         login_form:
           username: Username
           password: Password
