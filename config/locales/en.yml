@@ -84,7 +84,7 @@ en:
         email_header: Email header
         email_footer: Email footer
       membership_emails:
-        member_activated: User registration activate
+        member_activated: User registration activated
         member_accepted: User registration accepted
         member_created: User created
         member_deleted: User deleted

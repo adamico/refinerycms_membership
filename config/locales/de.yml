@@ -1,0 +1,146 @@
+de:
+  months: "%{count} Monate"
+  years: "%{count} Jahre"
+  refinery:
+    shared:
+      admin:
+        image_picker:
+          image: Bild
+    plugins:
+      refinerycms_memberships:
+        title: Mitgliedschaften
+    members:
+      shared:
+        account: Konto
+        profile: Profile
+        organization: Organisation
+      update:
+        successful: Mitgliedsprofil erfolgreich aktualisiert.
+    admin:
+      memberships_settings: Einstellungen
+      memberships:
+        new_members: Neue Benutzer
+        no_new_members: Keine neuen Benutzer
+        settings_admin_notification:
+          example: "Geben Sie Ihre Email-Adresse an"
+          hint: Wenn sich ein neuer Benutzer anmeldet, schickt Refinery ihm eine Benachrichtigung
+        settings:
+          signup_defaults: Voreinstellungen
+          signup_confirmation: Registrierungsbestätigung
+          no_confirmation: Keine Bestätigung
+          email_confirmation: Bestätigung durch Email
+          admin_confirmation: Bestätigung durch Admin
+          membership_expiration: Ablaufen der Mitgliedschaft
+          no_expiration: Kein Ablaufen
+          timed_expiration: Zeitbasiertes Ablaufen
+          default_expiration_in: "Standard-Ablaufzeit für Mitglieder"
+          default_groups: Standard-Gruppe für Mitglieder
+          assign_new_users_to_the_selected_groups: Neuen Benutzer zur gewählten Gruppe hinzufügen
+          no_groups_found: "Keine Gruppen gefunden"
+      roles:
+        delete: Gruppe löschen
+        no_roles_yet: Noch keine Rollen erstellt
+        edit: Gruppe bearbeiten
+        new_role: Neue Gruppe
+        roles_administration: Gruppenverwaltung
+      members:
+        accept: "Benutzerregistrierung annehmen"
+        reject: "Benutzerregistrierung ablehnen"
+        edit: Benutzer bearbeiten
+        delete: Benutzer löschen
+        member_until: Gültig bis
+        membership_expired: Registrierung abgelaufen am
+        not_yet_member: "Noch nicht aktiviert"
+        activate_member_for: "Benutzer aktivieren"
+        account_active: Benutzer aktivieren
+        new_account: Neue Benutzer
+        account_disabled: Inaktiver Benutzer
+        account_expired: Abgelaufener Benutzer
+        account_rejected: Abgelehnter Benutzer
+        account_not_activated: Registrierung noch nicht aktiviert
+        disable: Benutzer deaktivieren
+        enable: Benutzer aktivieren
+        delete: Benutzer löschen
+        no_members_yet: Noch keine Benutzer registriert
+        all_members: Alle Benutzer
+        members_administration: Benutzerverwaltung
+        account: Registrierung
+        organization: Organisation
+        profile: Profile
+        activation: Aktivierung
+        user_roles: "Gruppen des Benutzers"
+        user_can_login: Benutzer kann sich einloggen
+        extend: Benutzerregistrierung verlängern
+        extend_membership_for: Benutzerregistrierung verlängern für
+        filter_by: Filtern nach
+        member_actions: Benutzeraktionen
+        filter:
+          all: Alle
+          active: Aktive
+          rejected: Abgelehnt
+          disabled: Inaktiv
+          unconfirmed: Unbestätigt
+      membership_email_parts:
+        email_header: Email Kopf
+        email_footer: Email Fuß
+      membership_emails:
+        member_activated: Benutzerregistrierung aktiviert
+        member_accepted: Benutzerregistrierung angenommen
+        member_created: Benutzer angelegt
+        member_deleted: Benutzer gelöscht
+        member_rejected: Benutzer abgelehnt
+        membership_extended: Benutzerregistrierung verlängert
+        edit: Email bearbeiten
+        no_emails_yet: Noch keine Emails
+        emails_administration: Emailverwaltung
+        membership_email: Email Mitgliedschaften
+        email_settings: Emaileinstellungen
+        toggle_email_body_help: Hilfe umschalten
+        email_body_help_title: Email-Body Hilfe
+        shared_email_parts: Geteilte Email-Teile
+        email_body_help:
+          email_body_help: "Im Email-Text werden spezielle Tags durch Benutzereigenschaften ersetzt (Name, Organisation usw.)."
+          available_tags: Mögliche Tags
+          user_data: Benutzerdaten
+          member_until: Registrierung bleibt aktiv bis
+          activation_url: "URL zur Aktivierung"
+        settings:
+          deliver_notifications_on: Benachrichtige den Benutzer wenn
+          deliver_admin_notifications_to: Benachrichtige Admin wenn
+          email_delivery: Emailzustellung
+          admin_notifications: Admin-Benachrichtigungen
+    pages:
+      admin:
+        tabs:
+          roles:
+            allow_everyone: "Allen erlauben"
+            allow_all_members: "Allen registrierten Benutzer erlauben"
+            allow_members_of: "Benutzer in Gruppen erlauben"
+    memberships:
+      show:
+        other: Andere Mitgliedschaften
+      members:
+        profile:
+          edit_profile: Profil bearbeiten
+        login_form:
+          username: Benutzername
+          password: Passwort
+          login: Login
+        error_messages:
+          problems_in_following_fields: Es wurden Fehler in folgenden Feldern gefunden
+        form_actions:
+          save: Speichern
+          cancel: Abbrechen
+        form:
+          blank_password_keeps_current: Passwort freilassen, um aktuelles beizubehalten
+          state_province: "Provinz/Bundesland"
+          postal_code: "PLZ"
+        new:
+          title: Mitgliedschafts-Antragsformular
+          instructions: Bitte vervollständige die Informationen. Du wirds benachrichtigt,
+            sobald deine Registrierung bestätigt wurde.
+          submit_application: Anmeldung abschicken
+    activerecord:
+      attributes:
+       user:
+        membership_level: Mitgliedschafts-Level
